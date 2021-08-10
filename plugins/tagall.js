@@ -23,7 +23,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
 Asena.addCommand({pattern: 'tagall ?(.*)', fromMe: true, dontAddCommandList: true, desc: Lang.TAGALL_DESC }, (async (message, match) => {
    
     if (!message.reply_message) {
-        if (match[1] !== '') {
+        if (match[2] !== '') {
             grup = await message.client.groupMetadata(message.jid);
             var jids = [];
             mesaj = '';
